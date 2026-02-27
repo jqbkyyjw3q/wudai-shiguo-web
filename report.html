@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>《太平年》收视与五代十国历史速览</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-slate-50 text-slate-800">
+    <main class="max-w-6xl mx-auto px-4 py-8 md:py-12">
+      <header class="mb-8">
+        <h1 class="text-2xl md:text-4xl font-bold">《太平年》收视与五代十国历史速览</h1>
+        <p class="mt-3 text-slate-600">更新时间：2026-02-08（基于可抓取公开网页整理）</p>
+      </header>
+
+      <section class="bg-white rounded-2xl p-4 md:p-5 shadow-sm border border-slate-200 mb-6">
+        <h2 class="font-semibold mb-3">主要入口</h2>
+        <div class="flex flex-wrap gap-2 text-sm">
+          <a class="px-3 py-1.5 rounded-lg border bg-slate-50" href="#relation-net">人物关系网（总览）</a>
+          <a class="px-3 py-1.5 rounded-lg border bg-slate-50" href="./people-qian.html">钱弘俶详情</a>
+          <a class="px-3 py-1.5 rounded-lg border bg-slate-50" href="./people-zhao.html">赵匡胤详情</a>
+          <a class="px-3 py-1.5 rounded-lg border bg-slate-50" href="./people-chai.html">柴荣详情</a>
+          <a class="px-3 py-1.5 rounded-lg border bg-slate-50" href="./people-zhao-guangyi.html">赵光义详情</a>
+          <a class="px-3 py-1.5 rounded-lg border bg-slate-50" href="./people-generals-song.html">北宋名将专题</a>
+        </div>
+      </section>
+
+      <section class="bg-white rounded-2xl p-5 md:p-7 shadow-sm border border-slate-200 mb-6">
+        <h2 class="text-xl font-semibold mb-4">一、目前可见的收视表现</h2>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="rounded-xl bg-indigo-50 p-4 border border-indigo-100">
+            <div class="text-sm text-indigo-700 mb-1">公开报道口径 A</div>
+            <div class="text-3xl font-bold text-indigo-800">2.696%</div>
+            <p class="text-sm mt-2 text-slate-700">来源文章称：《太平年》收视率达 2.696%。</p>
+          </div>
+          <div class="rounded-xl bg-violet-50 p-4 border border-violet-100">
+            <div class="text-sm text-violet-700 mb-1">公开报道口径 B</div>
+            <div class="text-3xl font-bold text-violet-800">2.801%</div>
+            <p class="text-sm mt-2 text-slate-700">另一篇战报提到：CVB 收视率高达 2.801%。</p>
+          </div>
+        </div>
+
+        <div class="mt-4 p-4 rounded-xl bg-amber-50 border border-amber-200 text-sm leading-6">
+          <strong>说明：</strong>不同报道会因统计周期（单日/首周）、口径（平均/峰值）和发布时间不同而出现差异。
+        </div>
+      </section>
+
+      <section class="bg-white rounded-2xl p-5 md:p-7 shadow-sm border border-slate-200 mb-6">
+        <h2 class="text-xl font-semibold mb-4">二、五代十国：看剧前的历史底图</h2>
+        <div class="grid md:grid-cols-3 gap-4 mb-4">
+          <div class="rounded-xl border border-slate-200 p-4">
+            <div class="text-xs text-slate-500">时间范围</div>
+            <div class="text-lg font-semibold mt-1">907—960（狭义）</div>
+            <div class="text-sm text-slate-600 mt-1">广义常到 979（北汉亡）</div>
+          </div>
+          <div class="rounded-xl border border-slate-200 p-4">
+            <div class="text-xs text-slate-500">核心格局</div>
+            <div class="text-lg font-semibold mt-1">北方五代 + 南方诸国并立</div>
+            <div class="text-sm text-slate-600 mt-1">频繁更替，战与和交织</div>
+          </div>
+          <div class="rounded-xl border border-slate-200 p-4">
+            <div class="text-xs text-slate-500">《太平年》主线焦点</div>
+            <div class="text-lg font-semibold mt-1">吴越“纳土归宋”</div>
+            <div class="text-sm text-slate-600 mt-1">从割据走向统一的关键节点</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="relation-net" class="bg-white rounded-2xl p-5 md:p-7 shadow-sm border border-slate-200 mb-6">
+        <div class="flex items-center justify-between gap-3 mb-4">
+          <h2 class="text-xl font-semibold">三、可视化面板</h2>
+          <div class="inline-flex bg-slate-100 rounded-xl p-1">
+            <button id="tab-timeline" class="tab-btn px-3 py-1.5 rounded-lg text-sm bg-indigo-600 text-white">时间线</button>
+            <button id="tab-rel" class="tab-btn px-3 py-1.5 rounded-lg text-sm text-slate-600">各国联系</button>
+            <button id="tab-map" class="tab-btn px-3 py-1.5 rounded-lg text-sm text-slate-600">国家地盘地图</button>
+          </div>
+        </div>
+
+        <div id="panel-timeline">
+          <div class="overflow-x-auto">
+            <div class="min-w-[1100px]">
+              <div class="text-xs text-slate-500 mb-2">907 → 979</div>
+              <div class="relative h-2 bg-slate-200 rounded-full mb-6">
+                <div class="absolute inset-0 bg-gradient-to-r from-indigo-300 via-violet-300 to-sky-300 rounded-full"></div>
+              </div>
+
+              <div class="grid gap-3 text-sm">
+                <div class="grid grid-cols-[90px_1fr] items-center gap-3">
+                  <div class="text-slate-500">中原主线</div>
+                  <div class="grid grid-cols-72 h-8 rounded-lg overflow-hidden border border-slate-200">
+                    <div class="col-span-16 bg-indigo-500 text-white text-xs flex items-center justify-center">后梁 907-923</div>
+                    <div class="col-span-13 bg-indigo-600 text-white text-xs flex items-center justify-center">后唐 923-936</div>
+                    <div class="col-span-11 bg-indigo-700 text-white text-xs flex items-center justify-center">后晋 936-947</div>
+                    <div class="col-span-4 bg-indigo-800 text-white text-xs flex items-center justify-center">后汉</div>
+                    <div class="col-span-9 bg-indigo-900 text-white text-xs flex items-center justify-center">后周</div>
+                    <div class="col-span-19 bg-sky-600 text-white text-xs flex items-center justify-center">北宋（960起）</div>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-[90px_1fr] items-center gap-3">
+                  <div class="text-slate-500">吴越</div>
+                  <div class="h-8 rounded-lg bg-emerald-500 text-white text-xs flex items-center px-3">907—978（与北宋由对峙走向纳土归宋）</div>
+                </div>
+
+                <div class="grid grid-cols-[90px_1fr] items-center gap-3">
+                  <div class="text-slate-500">南唐</div>
+                  <div class="h-8 rounded-lg bg-orange-500 text-white text-xs flex items-center px-3">937—975（江南重要政权，后并入宋）</div>
+                </div>
+
+                <div class="grid grid-cols-[90px_1fr] items-center gap-3">
+                  <div class="text-slate-500">北汉</div>
+                  <div class="h-8 rounded-lg bg-rose-500 text-white text-xs flex items-center px-3">951—979（最终被宋灭）</div>
+                </div>
+              </div>
+
+              <div class="mt-5 flex flex-wrap gap-2 text-xs">
+                <span class="px-2 py-1 rounded bg-slate-100 border">907 朱温建后梁</span>
+                <span class="px-2 py-1 rounded bg-slate-100 border">951 郭威建后周</span>
+                <span class="px-2 py-1 rounded bg-slate-100 border">960 赵匡胤建宋</span>
+                <span class="px-2 py-1 rounded bg-slate-100 border">975 宋灭南唐</span>
+                <span class="px-2 py-1 rounded bg-slate-100 border">978 吴越纳土归宋</span>
+                <span class="px-2 py-1 rounded bg-slate-100 border">979 宋灭北汉</span>
+                <span class="px-2 py-1 rounded bg-slate-100 border">976 赵光义即位（宋太宗）</span>
+                <span class="px-2 py-1 rounded bg-slate-100 border">1004 澶渊之盟（北宋对辽）</span>
+              </div>
+              <div class="mt-3 rounded-lg border border-slate-200 bg-slate-50 p-3 text-sm text-slate-700">
+                <b>北宋后续（979 之后）简要：</b>完成统一后，北宋进入“边防与财政并重”的长期阶段。宋太宗时期继续整合军政体系；宋真宗时期出现澶渊之盟（1004），此后宋辽关系进入相对稳定但长期对峙的格局。
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="panel-rel" class="hidden">
+          <div id="relation-net"></div>
+          <p class="text-sm text-slate-600 mb-3">示意图：突出《太平年》相关国家之间的主线关系（非完整外交史）。</p>
+          <div class="overflow-x-auto">
+            <svg viewBox="0 0 980 430" class="min-w-[980px] w-full rounded-xl border bg-slate-50">
+              <defs>
+                <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+                  <path d="M0,0 L8,4 L0,8 Z" fill="#475569"/>
+                </marker>
+                <marker id="arrowRed" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+                  <path d="M0,0 L8,4 L0,8 Z" fill="#dc2626"/>
+                </marker>
+              </defs>
+
+              <rect x="390" y="36" width="200" height="56" rx="10" fill="#1e3a8a"/>
+              <text x="490" y="70" fill="white" text-anchor="middle" font-size="18">北宋（960起）</text>
+
+              <rect x="120" y="150" width="190" height="56" rx="10" fill="#059669"/>
+              <text x="215" y="184" fill="white" text-anchor="middle" font-size="18">吴越（钱氏）</text>
+
+              <rect x="390" y="150" width="190" height="56" rx="10" fill="#ea580c"/>
+              <text x="485" y="184" fill="white" text-anchor="middle" font-size="18">南唐</text>
+
+              <rect x="670" y="150" width="190" height="56" rx="10" fill="#be123c"/>
+              <text x="765" y="184" fill="white" text-anchor="middle" font-size="18">北汉</text>
+
+              <rect x="390" y="300" width="200" height="56" rx="10" fill="#4338ca"/>
+              <text x="490" y="334" fill="white" text-anchor="middle" font-size="18">后周（郭荣）</text>
+
+              <line x1="215" y1="150" x2="455" y2="92" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+              <text x="300" y="110" fill="#334155" font-size="13">978 纳土归宋</text>
+
+              <line x1="485" y1="150" x2="490" y2="92" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arrowRed)"/>
+              <text x="500" y="118" fill="#b91c1c" font-size="13">975 并入宋</text>
+
+              <line x1="765" y1="150" x2="530" y2="92" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arrowRed)"/>
+              <text x="658" y="108" fill="#b91c1c" font-size="13">979 宋灭北汉</text>
+
+              <line x1="490" y1="300" x2="490" y2="92" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+              <text x="502" y="258" fill="#334155" font-size="13">制度/军事基础承接</text>
+
+              <line x1="580" y1="178" x2="670" y2="178" stroke="#7c3aed" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrow)"/>
+              <text x="620" y="169" fill="#6d28d9" font-size="12">并立竞争</text>
+            </svg>
+          </div>
+          <div class="mt-3 text-xs text-slate-500">图例：灰色箭头=政治归附/承接；红色箭头=军事并入；虚线=并立竞争关系。</div>
+        </div>
+
+        <div id="panel-map" class="hidden">
+          <p class="text-sm text-slate-600 mb-3">地图为历史教学示意（非精确疆界线），用于理解各国大致空间分布与相邻关系。</p>
+
+          <div class="rounded-xl border border-slate-200 bg-white p-3 mb-4">
+            <div class="flex items-center justify-between gap-3 mb-2">
+              <h3 class="font-semibold">五代十国AI出图（Gemini / nano pro）</h3>
+              <a class="text-xs text-sky-700 underline break-all" href="./outputs/2026-02-11-13-49-21-wudai-shiguo-nano-pro.png" target="_blank">打开原图链接</a>
+            </div>
+            <img src="./outputs/2026-02-11-13-49-21-wudai-shiguo-nano-pro.png" alt="五代十国地理格局示意图（Gemini生成）" class="w-full rounded-lg border border-slate-200" />
+            <p class="text-xs text-slate-500 mt-2">图片路径：/outputs/2026-02-11-13-49-21-wudai-shiguo-nano-pro.png</p>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-3 mb-4">
+            <div class="rounded-xl border border-slate-200 bg-white p-3">
+              <div class="text-xs text-slate-500">吴越（907—978）</div>
+              <div class="font-semibold mt-1">都城：杭州（今浙江杭州）</div>
+              <div class="text-xs text-slate-600 mt-1">核心：浙东浙西 + 东南沿海，海贸与水网优势明显</div>
+            </div>
+            <div class="rounded-xl border border-slate-200 bg-white p-3">
+              <div class="text-xs text-slate-500">南唐（937—975）</div>
+              <div class="font-semibold mt-1">都城：金陵（今江苏南京）</div>
+              <div class="text-xs text-slate-600 mt-1">核心：长江中下游江南地带，水运发达</div>
+            </div>
+            <div class="rounded-xl border border-slate-200 bg-white p-3">
+              <div class="text-xs text-slate-500">北汉（951—979）</div>
+              <div class="font-semibold mt-1">都城：晋阳（今山西太原）</div>
+              <div class="text-xs text-slate-600 mt-1">核心：河东（山西）为主，北方山地防御特征明显</div>
+            </div>
+            <div class="rounded-xl border border-slate-200 bg-white p-3">
+              <div class="text-xs text-slate-500">后周/北宋早期</div>
+              <div class="font-semibold mt-1">都城：汴京（今河南开封）</div>
+              <div class="text-xs text-slate-600 mt-1">核心：黄河中下游平原，中原统一战略枢纽</div>
+            </div>
+          </div>
+
+          <div class="rounded-xl border border-slate-200 bg-white p-4 mb-4">
+            <h3 class="font-semibold mb-2">地理主线（剧集关联）</h3>
+            <div class="flex flex-wrap gap-2 text-xs">
+              <span class="px-2 py-1 rounded bg-slate-100 border">开封（中原）→ 南京（江南核心）</span>
+              <span class="px-2 py-1 rounded bg-slate-100 border">南京 → 杭州（东南沿海）</span>
+              <span class="px-2 py-1 rounded bg-slate-100 border">最终北向收束：太原</span>
+            </div>
+            <p class="text-xs text-slate-600 mt-2">关键年份：975（南唐并入宋） / 978（吴越纳土） / 979（北汉灭亡）。</p>
+          </div>
+
+          <div class="overflow-x-auto">
+            <svg viewBox="0 0 980 560" class="min-w-[980px] w-full rounded-xl border bg-[#f8fafc]">
+              <rect x="20" y="20" width="940" height="520" rx="14" fill="#eef2ff"/>
+
+              <path d="M130,120 L250,80 L400,90 L540,120 L700,160 L820,250 L790,360 L640,430 L470,450 L320,430 L190,360 L120,240 Z" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+              <text x="420" y="280" font-size="14" fill="#64748b">中原-江南-华南地理示意底图（非精确边界）</text>
+
+              <path d="M260,180 L430,165 L520,205 L500,275 L380,305 L270,270 Z" fill="#1d4ed8" fill-opacity="0.78" stroke="#1e3a8a" stroke-width="2"/>
+              <text x="370" y="235" font-size="18" text-anchor="middle" fill="white">后周 / 北宋中原核心</text>
+
+              <path d="M470,250 L640,250 L700,320 L620,390 L500,370 L450,310 Z" fill="#f97316" fill-opacity="0.82" stroke="#c2410c" stroke-width="2"/>
+              <text x="575" y="322" font-size="18" text-anchor="middle" fill="white">南唐</text>
+
+              <path d="M620,285 L725,295 L750,350 L690,410 L610,390 L590,335 Z" fill="#10b981" fill-opacity="0.86" stroke="#047857" stroke-width="2"/>
+              <text x="675" y="352" font-size="18" text-anchor="middle" fill="white">吴越</text>
+
+              <path d="M520,130 L630,120 L675,185 L620,235 L535,220 L500,170 Z" fill="#e11d48" fill-opacity="0.82" stroke="#9f1239" stroke-width="2"/>
+              <text x="588" y="182" font-size="18" text-anchor="middle" fill="white">北汉</text>
+
+              <line x1="640" y1="334" x2="560" y2="310" stroke="#334155" stroke-width="2" stroke-dasharray="5 4"/>
+              <line x1="640" y1="334" x2="590" y2="250" stroke="#334155" stroke-width="2" stroke-dasharray="5 4"/>
+              <line x1="575" y1="320" x2="588" y2="182" stroke="#334155" stroke-width="2" stroke-dasharray="5 4"/>
+
+              <rect x="55" y="420" width="270" height="90" rx="10" fill="white" stroke="#cbd5e1"/>
+              <text x="75" y="445" font-size="14" fill="#334155">图例</text>
+              <rect x="75" y="458" width="14" height="14" fill="#1d4ed8"/><text x="98" y="470" font-size="13" fill="#334155">中原核心（后周/北宋）</text>
+              <rect x="75" y="478" width="14" height="14" fill="#f97316"/><text x="98" y="490" font-size="13" fill="#334155">南唐</text>
+              <rect x="185" y="478" width="14" height="14" fill="#10b981"/><text x="208" y="490" font-size="13" fill="#334155">吴越</text>
+            </svg>
+          </div>
+
+          <div class="mt-4">
+            <h3 class="font-semibold mb-3">关键地理节点（现代城市对照）</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-3">
+              <figure class="rounded-xl overflow-hidden border border-slate-200 bg-white">
+                <img src="./assets/images/hangzhou-westlake.jpg" alt="杭州西湖" class="w-full h-36 object-cover" />
+                <figcaption class="p-2 text-xs text-slate-600">杭州（吴越都城）</figcaption>
+              </figure>
+              <figure class="rounded-xl overflow-hidden border border-slate-200 bg-white">
+                <img src="./assets/images/nanjing-city.jpg" alt="南京城市天际线" class="w-full h-36 object-cover" />
+                <figcaption class="p-2 text-xs text-slate-600">南京（南唐都城金陵）</figcaption>
+              </figure>
+              <figure class="rounded-xl overflow-hidden border border-slate-200 bg-white">
+                <img src="./assets/images/taiyuan-city.jpg" alt="太原城市景观" class="w-full h-36 object-cover" />
+                <figcaption class="p-2 text-xs text-slate-600">太原（北汉都城晋阳）</figcaption>
+              </figure>
+              <figure class="rounded-xl overflow-hidden border border-slate-200 bg-white">
+                <img src="./assets/images/kaifeng-city.jpg" alt="开封龙亭" class="w-full h-36 object-cover" />
+                <figcaption class="p-2 text-xs text-slate-600">开封（后周/北宋都城汴京）</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <p class="text-xs text-slate-500 mt-3">说明：如需“按年份切换地盘变化”（例如 951/960/975/978/979），我可以再做成地图时间滑块版本。</p>
+        </div>
+      </section>
+
+      <section class="bg-white rounded-2xl p-5 md:p-7 shadow-sm border border-slate-200 mb-6">
+        <h2 class="text-xl font-semibold mb-4">四、剧中人物 ↔ 历史人物对照表（含人物图）</h2>
+
+        <div class="grid md:grid-cols-5 gap-4 mb-5">
+          <a href="./people-qian.html" class="block rounded-xl border border-slate-200 overflow-hidden bg-white hover:shadow-md transition">
+            <img src="./assets/images/qian-hongchu.jpg" alt="钱弘俶历史画像" class="w-full h-44 object-cover" />
+            <div class="p-3">
+              <div class="font-semibold">钱弘俶</div>
+              <div class="text-xs text-slate-500 mt-1">吴越末主 / 纳土归宋核心人物</div>
+              <div class="text-xs text-sky-700 mt-2">查看人物详情 →</div>
+            </div>
+          </a>
+
+          <a href="./people-zhao.html" class="block rounded-xl border border-slate-200 overflow-hidden bg-white hover:shadow-md transition">
+            <img src="./assets/images/song-taizu.jpg" alt="赵匡胤历史画像" class="w-full h-44 object-cover" />
+            <div class="p-3">
+              <div class="font-semibold">赵匡胤</div>
+              <div class="text-xs text-slate-500 mt-1">宋太祖 / 统一进程发起者</div>
+              <div class="text-xs text-sky-700 mt-2">查看人物详情 →</div>
+            </div>
+          </a>
+
+          <a href="./people-chai.html" class="block rounded-xl border border-slate-200 overflow-hidden bg-white hover:shadow-md transition">
+            <img src="./assets/images/chai-rong.jpg" alt="郭荣（柴荣）历史画像" class="w-full h-44 object-cover" />
+            <div class="p-3">
+              <div class="font-semibold">郭荣（柴荣）</div>
+              <div class="text-xs text-slate-500 mt-1">后周世宗 / 承前启后关键君主</div>
+              <div class="text-xs text-sky-700 mt-2">查看人物详情 →</div>
+            </div>
+          </a>
+
+          <a href="./people-zhao-guangyi.html" class="block rounded-xl border border-slate-200 overflow-hidden bg-white hover:shadow-md transition">
+            <img src="./assets/images/song-taizong.jpg" alt="宋太宗赵光义历史画像" class="w-full h-44 object-cover" />
+            <div class="p-3">
+              <div class="font-semibold">赵光义（宋太宗）</div>
+              <div class="text-xs text-slate-500 mt-1">赵匡胤之弟 / 北宋第二位皇帝</div>
+              <div class="text-xs text-sky-700 mt-2">查看人物详情 →</div>
+            </div>
+          </a>
+
+          <a href="./people-generals-song.html" class="block rounded-xl border border-slate-200 overflow-hidden bg-white hover:shadow-md transition">
+            <img src="./assets/images/song-taizu.jpg" alt="北宋将领专题" class="w-full h-44 object-cover" />
+            <div class="p-3">
+              <div class="font-semibold">北宋名将专题</div>
+              <div class="text-xs text-slate-500 mt-1">曹彬、潘美、杨业等人物线</div>
+              <div class="text-xs text-sky-700 mt-2">查看专题 →</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm border-collapse">
+            <thead>
+              <tr class="bg-slate-100 text-left">
+                <th class="p-3 border border-slate-200">剧中人物</th>
+                <th class="p-3 border border-slate-200">历史人物</th>
+                <th class="p-3 border border-slate-200">身份/时代位置</th>
+                <th class="p-3 border border-slate-200">与主线关系</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border border-slate-200">钱弘俶</td>
+                <td class="p-3 border border-slate-200">钱弘俶（吴越末主）</td>
+                <td class="p-3 border border-slate-200">吴越国君，五代末—北宋初</td>
+                <td class="p-3 border border-slate-200">“纳土归宋”关键人物</td>
+              </tr>
+              <tr class="bg-slate-50">
+                <td class="p-3 border border-slate-200">赵匡胤</td>
+                <td class="p-3 border border-slate-200">宋太祖赵匡胤</td>
+                <td class="p-3 border border-slate-200">960年建立北宋</td>
+                <td class="p-3 border border-slate-200">统一进程发起者</td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-slate-200">郭荣</td>
+                <td class="p-3 border border-slate-200">后周世宗柴荣（郭荣）</td>
+                <td class="p-3 border border-slate-200">后周核心君主</td>
+                <td class="p-3 border border-slate-200">为宋代统一奠定军事与制度基础</td>
+              </tr>
+              <tr class="bg-slate-50">
+                <td class="p-3 border border-slate-200">赵光义（常在相关叙事出现）</td>
+                <td class="p-3 border border-slate-200">宋太宗赵光义</td>
+                <td class="p-3 border border-slate-200">北宋第二位皇帝</td>
+                <td class="p-3 border border-slate-200">完成北汉线收束（979）</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-xs text-slate-500 mt-3">注：当前可稳定抓取到的钱弘俶为公开报道配图；赵匡胤、郭荣使用公开历史画像。你若给我指定剧照链接，我可一键替换成纯剧照版。</p>
+      </section>
+
+      <section class="bg-white rounded-2xl p-5 md:p-7 shadow-sm border border-slate-200 mb-6">
+        <h2 class="text-xl font-semibold mb-4">五、各国领土与军事实力（简表）</h2>
+        <div class="overflow-x-auto mb-4">
+          <table class="w-full text-sm border-collapse">
+            <thead>
+              <tr class="bg-slate-100 text-left">
+                <th class="p-3 border border-slate-200">政权</th>
+                <th class="p-3 border border-slate-200">主要领土/核心区域</th>
+                <th class="p-3 border border-slate-200">军事特征（定性）</th>
+                <th class="p-3 border border-slate-200">代表将领/军事人物</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border border-slate-200">后周（后接北宋）</td>
+                <td class="p-3 border border-slate-200">中原核心：开封、洛阳一线</td>
+                <td class="p-3 border border-slate-200">禁军体系较强，中央动员能力高，具备北伐与统一潜力</td>
+                <td class="p-3 border border-slate-200">柴荣（世宗）、赵匡胤</td>
+              </tr>
+              <tr class="bg-slate-50">
+                <td class="p-3 border border-slate-200">吴越</td>
+                <td class="p-3 border border-slate-200">两浙核心：杭州、越州、明州等沿海腹地</td>
+                <td class="p-3 border border-slate-200">水陆防御与海贸支撑能力突出，重守势与务实外交</td>
+                <td class="p-3 border border-slate-200">钱镠、钱弘俶</td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-slate-200">南唐</td>
+                <td class="p-3 border border-slate-200">江淮—江南核心：江宁（南京）、扬州等</td>
+                <td class="p-3 border border-slate-200">经济基础较强，曾具扩张能力；后期对抗宋军压力增大</td>
+                <td class="p-3 border border-slate-200">李昪、李璟、李煜（君主线）</td>
+              </tr>
+              <tr class="bg-slate-50">
+                <td class="p-3 border border-slate-200">北汉</td>
+                <td class="p-3 border border-slate-200">河东/太原周边山地据点</td>
+                <td class="p-3 border border-slate-200">依托地形防御与北方援助，持续保持割据韧性</td>
+                <td class="p-3 border border-slate-200">刘崇（刘旻）、刘继元</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-semibold mb-2">补充：重要武将（便于追剧对照）</h3>
+        <div class="grid md:grid-cols-2 gap-3 text-sm">
+          <div class="rounded-lg border p-3 bg-slate-50"><b>赵匡胤</b>：后周禁军核心将领，后建立北宋。</div>
+          <div class="rounded-lg border p-3 bg-slate-50"><b>曹彬</b>：北宋统一战争的重要将领之一（后续阶段）。</div>
+          <div class="rounded-lg border p-3 bg-slate-50"><b>潘美</b>：宋初军事将领，在统一进程中多次出征。</div>
+          <div class="rounded-lg border p-3 bg-slate-50"><b>杨业</b>：北宋名将，北方防务形象代表人物之一。</div>
+        </div>
+        <p class="text-xs text-slate-500 mt-3">注：本页“军事实力”采用历史叙述中的定性比较，不作现代统计学意义上的精确军力对比。</p>
+      </section>
+
+      <section class="bg-white rounded-2xl p-5 md:p-7 shadow-sm border border-slate-200 mb-6">
+        <h2 class="text-xl font-semibold mb-4">六、太平年页面重展示（新增视觉元素）</h2>
+        <p class="text-sm text-slate-600 mb-4">给你做了一版更适合转发的“图文强化版”：补了历史图、人物图和战场氛围图，手机看也更直观。</p>
+        <div class="grid md:grid-cols-3 gap-4">
+          <figure class="rounded-xl overflow-hidden border border-slate-200 bg-white">
+            <img src="./assets/images/song-taizu.jpg" alt="宋太祖画像" class="w-full h-48 object-cover" />
+            <figcaption class="p-3 text-sm text-slate-700">宋太祖赵匡胤：开国与统一进程起点</figcaption>
+          </figure>
+          <figure class="rounded-xl overflow-hidden border border-slate-200 bg-white">
+            <img src="./assets/images/song-taizong.jpg" alt="宋太宗画像" class="w-full h-48 object-cover" />
+            <figcaption class="p-3 text-sm text-slate-700">宋太宗赵光义：统一收官与北宋后续阶段</figcaption>
+          </figure>
+          <figure class="rounded-xl overflow-hidden border border-slate-200 bg-white">
+            <img src="./assets/images/song-atmosphere.jpg" alt="宋代城市生活图" class="w-full h-48 object-cover" />
+            <figcaption class="p-3 text-sm text-slate-700">宋代城市与社会气象（氛围参考）</figcaption>
+          </figure>
+        </div>
+
+        <div class="mt-4 rounded-xl border border-indigo-100 bg-indigo-50 p-4 text-sm leading-7">
+          <b>快速入口（新版）：</b><br/>
+          · 总览页：<a class="underline" href="./report.html">/report.html</a><br/>
+          · 赵光义详情：<a class="underline" href="./people-zhao-guangyi.html">/people-zhao-guangyi.html</a><br/>
+          · 北宋名将专题：<a class="underline" href="./people-generals-song.html">/people-generals-song.html</a><br/>
+          · 五代十国AI图（绝对链接）：<a class="underline break-all" href="http://141.98.197.188:3000/outputs/2026-02-11-13-49-21-wudai-shiguo-nano-pro.png" target="_blank">http://141.98.197.188:3000/outputs/2026-02-11-13-49-21-wudai-shiguo-nano-pro.png</a><br/>
+          · Costa信息图（绝对链接）：<a class="underline break-all" href="http://141.98.197.188:3000/outputs/2026-02-11-15-10-24-costa-infographic-nano-pro.png" target="_blank">http://141.98.197.188:3000/outputs/2026-02-11-15-10-24-costa-infographic-nano-pro.png</a>
+        </div>
+      </section>
+
+      <section class="bg-white rounded-2xl p-5 md:p-7 shadow-sm border border-slate-200 mb-6">
+        <h2 class="text-xl font-semibold mb-4">七、历史名词速览 + 观剧提示</h2>
+
+        <div class="grid md:grid-cols-2 gap-4 mb-4 text-sm">
+          <div class="rounded-xl border border-slate-200 p-4 bg-slate-50">
+            <h3 class="font-semibold mb-2">名词速览</h3>
+            <ul class="space-y-2 text-slate-700">
+              <li><b>纳土归宋：</b>割据政权主动献地归附中央王朝（吴越 978）。</li>
+              <li><b>陈桥兵变：</b>960 年赵匡胤受拥立，后周转入北宋。</li>
+              <li><b>河东：</b>以今山西为核心的战略区，北汉长期据守。</li>
+              <li><b>江南核心区：</b>以金陵、杭州等为代表的经济密集地带。</li>
+            </ul>
+          </div>
+
+          <div class="rounded-xl border border-slate-200 p-4 bg-slate-50">
+            <h3 class="font-semibold mb-2">观剧提示（不剧透版）</h3>
+            <ul class="space-y-2 text-slate-700">
+              <li>看人物对话时，优先记住“都城在哪、靠什么吃饭、跟谁接壤”。</li>
+              <li>涉及“称臣、纳土、入朝”时，本质是地缘和军政能力变化。</li>
+              <li>吴越线建议和地图页一起看，理解“为什么能和平收束”。</li>
+              <li>南唐线重点看“江南富庶”与“中原军事压力”如何此消彼长。</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="rounded-xl border border-indigo-200 bg-indigo-50 p-4 text-sm">
+          <h3 class="font-semibold mb-2">一分钟速记（适合转发）</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2 py-1 rounded bg-white border">960 北宋建立</span>
+            <span class="px-2 py-1 rounded bg-white border">975 南唐并入宋</span>
+            <span class="px-2 py-1 rounded bg-white border">978 吴越纳土归宋</span>
+            <span class="px-2 py-1 rounded bg-white border">979 北汉灭亡</span>
+            <span class="px-2 py-1 rounded bg-white border">统一完成（狭义收束）</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white rounded-2xl p-5 md:p-7 shadow-sm border border-slate-200">
+        <h2 class="text-xl font-semibold mb-3">八、可核查来源</h2>
+        <ul class="list-disc ml-5 space-y-2 text-sky-700 break-all">
+          <li><a class="underline" href="https://news.qq.com/rain/a/20260202A01S8Q00" target="_blank">腾讯新闻：《太平年》何以炼成（文中提及 2.696%）</a></li>
+          <li><a class="underline" href="https://news.qq.com/rain/a/20260201A04OY100" target="_blank">腾讯新闻：《太平年》首周战报（文中提及 CVB 2.801%）</a></li>
+          <li><a class="underline" href="https://zh.wikipedia.org/wiki/%E4%BA%94%E4%BB%A3%E5%8D%81%E5%9B%BD" target="_blank">维基百科：五代十国（时间线与格局）</a></li>
+          <li><a class="underline" href="https://zh.wikipedia.org/wiki/%E5%90%B4%E8%B6%8A%E5%9B%BD" target="_blank">维基百科：吴越国（地理范围与都城）</a></li>
+          <li><a class="underline" href="https://zh.wikipedia.org/wiki/%E5%8D%97%E5%94%90" target="_blank">维基百科：南唐（都城与疆域变化）</a></li>
+          <li><a class="underline" href="https://zh.wikipedia.org/wiki/%E5%8C%97%E6%B1%89" target="_blank">维基百科：北汉（河东与太原）</a></li>
+          <li><a class="underline" href="https://zh.wikipedia.org/wiki/%E5%90%8E%E5%91%A8" target="_blank">维基百科：后周（开封与中原核心）</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <script>
+      const btnTimeline = document.getElementById('tab-timeline');
+      const btnRel = document.getElementById('tab-rel');
+      const btnMap = document.getElementById('tab-map');
+      const panelTimeline = document.getElementById('panel-timeline');
+      const panelRel = document.getElementById('panel-rel');
+      const panelMap = document.getElementById('panel-map');
+
+      function setBtnActive(btn, active) {
+        if (active) {
+          btn.classList.add('bg-indigo-600', 'text-white');
+          btn.classList.remove('text-slate-600');
+        } else {
+          btn.classList.remove('bg-indigo-600', 'text-white');
+          btn.classList.add('text-slate-600');
+        }
+      }
+
+      function activate(tab) {
+        panelTimeline.classList.toggle('hidden', tab !== 'timeline');
+        panelRel.classList.toggle('hidden', tab !== 'rel');
+        panelMap.classList.toggle('hidden', tab !== 'map');
+
+        setBtnActive(btnTimeline, tab === 'timeline');
+        setBtnActive(btnRel, tab === 'rel');
+        setBtnActive(btnMap, tab === 'map');
+      }
+
+      btnTimeline.addEventListener('click', () => activate('timeline'));
+      btnRel.addEventListener('click', () => activate('rel'));
+      btnMap.addEventListener('click', () => activate('map'));
+    </script>
+  </body>
+</html>
