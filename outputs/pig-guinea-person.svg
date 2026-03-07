@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f7efe6"/>
+      <stop offset="100%" stop-color="#f3d7c1"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.2"/>
+    </filter>
+  </defs>
+
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+
+  <!-- shoulders/body -->
+  <ellipse cx="512" cy="860" rx="280" ry="170" fill="#5a6fa8"/>
+  <ellipse cx="512" cy="895" rx="180" ry="80" fill="#435786" opacity="0.5"/>
+
+  <!-- neck -->
+  <rect x="462" y="620" width="100" height="100" rx="32" fill="#f4c7a1"/>
+
+  <!-- head base -->
+  <ellipse cx="512" cy="470" rx="220" ry="240" fill="#f6cda8"/>
+
+  <!-- guinea pig fluffy cheeks -->
+  <ellipse cx="352" cy="505" rx="80" ry="110" fill="#e7b08d" opacity="0.75"/>
+  <ellipse cx="672" cy="505" rx="80" ry="110" fill="#e7b08d" opacity="0.75"/>
+  <ellipse cx="332" cy="520" rx="42" ry="65" fill="#f1dbbf" opacity="0.8"/>
+  <ellipse cx="692" cy="520" rx="42" ry="65" fill="#f1dbbf" opacity="0.8"/>
+
+  <!-- ears: human + pig-ish -->
+  <ellipse cx="360" cy="285" rx="62" ry="75" fill="#f4c39d"/>
+  <ellipse cx="664" cy="285" rx="62" ry="75" fill="#f4c39d"/>
+  <ellipse cx="360" cy="297" rx="35" ry="43" fill="#ee9ea0" opacity="0.8"/>
+  <ellipse cx="664" cy="297" rx="35" ry="43" fill="#ee9ea0" opacity="0.8"/>
+
+  <!-- hair / fluffy crown -->
+  <path d="M320 420 C330 280, 430 220, 512 220 C610 220, 700 285, 708 420 C650 340, 585 330, 512 330 C440 330, 375 345, 320 420 Z" fill="#6b4c3b"/>
+  <circle cx="430" cy="295" r="26" fill="#7c5a47"/>
+  <circle cx="590" cy="290" r="22" fill="#7c5a47"/>
+  <circle cx="520" cy="260" r="30" fill="#7c5a47"/>
+
+  <!-- eyes -->
+  <ellipse cx="435" cy="455" rx="36" ry="26" fill="#fff"/>
+  <ellipse cx="589" cy="455" rx="36" ry="26" fill="#fff"/>
+  <circle cx="440" cy="458" r="13" fill="#2a1d15"/>
+  <circle cx="584" cy="458" r="13" fill="#2a1d15"/>
+  <circle cx="445" cy="452" r="4" fill="#fff"/>
+  <circle cx="589" cy="452" r="4" fill="#fff"/>
+
+  <!-- eyebrows -->
+  <path d="M392 420 Q434 398 473 417" stroke="#5c3f30" stroke-width="10" stroke-linecap="round" fill="none"/>
+  <path d="M551 417 Q591 398 633 420" stroke="#5c3f30" stroke-width="10" stroke-linecap="round" fill="none"/>
+
+  <!-- pig-like nose -->
+  <ellipse cx="512" cy="542" rx="74" ry="54" fill="#ee9ea0"/>
+  <ellipse cx="487" cy="542" rx="16" ry="22" fill="#b45f65"/>
+  <ellipse cx="537" cy="542" rx="16" ry="22" fill="#b45f65"/>
+
+  <!-- mouth -->
+  <path d="M466 610 Q512 640 558 610" stroke="#9e4b4f" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <path d="M490 610 Q512 622 534 610" stroke="#c06368" stroke-width="5" stroke-linecap="round" fill="none"/>
+
+  <!-- subtle whisker dots (guinea pig vibe) -->
+  <circle cx="388" cy="575" r="4" fill="#c68d6d"/>
+  <circle cx="408" cy="592" r="4" fill="#c68d6d"/>
+  <circle cx="636" cy="575" r="4" fill="#c68d6d"/>
+  <circle cx="616" cy="592" r="4" fill="#c68d6d"/>
+
+  <!-- tiny whiskers -->
+  <path d="M395 590 L345 598" stroke="#b88466" stroke-width="3" stroke-linecap="round"/>
+  <path d="M398 606 L350 620" stroke="#b88466" stroke-width="3" stroke-linecap="round"/>
+  <path d="M629 590 L679 598" stroke="#b88466" stroke-width="3" stroke-linecap="round"/>
+  <path d="M626 606 L674 620" stroke="#b88466" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- caption -->
+  <rect x="262" y="930" width="500" height="64" rx="16" fill="#ffffffcc" filter="url(#soft)"/>
+  <text x="512" y="973" text-anchor="middle" font-size="34" fill="#5a4a3f" font-family="Arial, PingFang SC, Microsoft YaHei">人像 × 小猪 × 荷兰猪（卡通版）</text>
+</svg>
