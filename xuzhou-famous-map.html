@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>徐州著名地点地图</title>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""
+  />
+  <style>
+    html, body { height: 100%; margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; }
+    #map { height: 100%; width: 100%; }
+    .panel {
+      position: absolute;
+      z-index: 1000;
+      top: 12px;
+      left: 12px;
+      background: rgba(255,255,255,0.94);
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0,0,0,.12);
+      padding: 10px 12px;
+      max-width: 300px;
+      line-height: 1.5;
+      font-size: 13px;
+    }
+    .panel h3 { margin: 0 0 6px; font-size: 15px; }
+    .panel ul { margin: 0; padding-left: 18px; max-height: 220px; overflow: auto; }
+    .leaflet-popup-content { margin: 10px 12px; }
+  </style>
+</head>
+<body>
+  <div class="panel">
+    <h3>徐州著名地点</h3>
+    <div>点击地图标记可查看详情</div>
+    <ul id="spotList"></ul>
+  </div>
+  <div id="map"></div>
+
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""
+  ></script>
+  <script>
+    // 说明：坐标为公开资料近似值，用于旅游浏览与路线规划参考
+    const spots = [
+      { name: "云龙湖风景区", lat: 34.2479, lng: 117.1678, desc: "徐州城市名片，湖景+步道+夜景" },
+      { name: "云龙山", lat: 34.2609, lng: 117.1787, desc: "俯瞰徐州城区，适合登高" },
+      { name: "徐州博物馆", lat: 34.2647, lng: 117.1879, desc: "看楚汉文化与地方历史" },
+      { name: "淮海战役纪念馆", lat: 34.2445, lng: 117.1947, desc: "近现代史重要纪念馆" },
+      { name: "龟山汉墓", lat: 34.3092, lng: 117.1412, desc: "西汉楚王墓，徐州汉文化代表" },
+      { name: "汉文化景区（狮子山楚王陵）", lat: 34.2815, lng: 117.2426, desc: "含汉兵马俑等展陈" },
+      { name: "户部山古民居", lat: 34.2588, lng: 117.1973, desc: "古民居群与传统街巷" },
+      { name: "回龙窝历史文化街区", lat: 34.2582, lng: 117.2001, desc: "老街区，文创与夜游" },
+      { name: "戏马台", lat: 34.2612, lng: 117.1998, desc: "项羽相关历史遗迹" },
+      { name: "潘安湖湿地公园", lat: 34.4428, lng: 117.3362, desc: "贾汪生态景区，适合半日游" },
+      { name: "窑湾古镇（新沂）", lat: 34.3590, lng: 118.3909, desc: "运河古镇，适合周边一日游" }
+    ];
+
+    const map = L.map('map', { zoomControl: true });
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+      attribution: '&copy; OpenStreetMap'
+    }).addTo(map);
+
+    const bounds = [];
+    const list = document.getElementById('spotList');
+
+    spots.forEach((spot, idx) => {
+      const marker = L.marker([spot.lat, spot.lng]).addTo(map);
+      marker.bindPopup(`<b>${idx + 1}. ${spot.name}</b><br/>${spot.desc}`);
+      bounds.push([spot.lat, spot.lng]);
+
+      const li = document.createElement('li');
+      li.innerHTML = `${idx + 1}. <a href="#" data-index="${idx}">${spot.name}</a>`;
+      list.appendChild(li);
+    });
+
+    list.addEventListener('click', (e) => {
+      const a = e.target.closest('a[data-index]');
+      if (!a) return;
+      e.preventDefault();
+      const i = Number(a.dataset.index);
+      const s = spots[i];
+      map.setView([s.lat, s.lng], 13);
+    });
+
+    map.fitBounds(bounds, { padding: [30, 30] });
+  </script>
+</body>
+</html>
